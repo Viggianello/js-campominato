@@ -23,12 +23,14 @@ stampa(mine);
 // Genero tramine la funzione numero_casuale n(in questo caso 16) numeri casuali ,per il compuper, tra 1 e 100, che saranno le "mine".
 // Creo un contatore per accertare di creare n numeri casuali
 var n = 1;
+var memoria_mine = [];//cosi posso salvare i dati per poi controntarli
 while (n <= 16) {
     var mine = numero_casuale(1,100);
     stampa(mine + " interazione numero n = " + n);// Visualizzo il numero_casuale.
+    memoria_mine.push(mine);
     n++ // Condizione di incremento per uscire dal ciclo.
 }
-
+stampa("tutti le mine da cui partire per il confronto " + memoria_mine);
  // Genero una funzione che crea N numero casuale da un valore minimo(min) ad uno massimo(max).
  // function numeri_casuali(n,min,max) {
  //     var i = 1;
@@ -51,7 +53,25 @@ while (n <= 16) {
     } else {
         stampa("il numero inserito non va bene");
     }
+// Ciclo do-while
+var i = 20;
+var x = -1;
+var memoria_numeri =[]
+do {
+    var numero_utente = parseInt(prompt("Inserisci un numero: " ,1));
+    // Verifico che il dato inserito sia idoneo
+    stampa(numero_utente);
+    memoria_numeri.push(numero_utente);
+    i--;
+    x++;
+} while (!isNaN(numero_utente) && numero_utente >= 1 && numero_utente <= 100 && i > 16 && numero_utente != parseInt(memoria_mine[x]) && x < 16)
 
 // (Brainstorming:do-while dove nel while come condizione mettero diverso dalle mine perchè se numero è presente nella lista delle mine, la partita termina, altrimenti il gioco continua chiedendo all'utente un altro numero (continua a giocare )) e poi anche il numero è presente nella lista delle mine, la partita termina, altrimenti il gioco continua chiedendo all'utente un altro numero (continua a giocare
 
 // visualizzo l output finale ove comunico il punteggio, cioè il numero di volte che l'utente ha inserito un numero consentito;
+if (true) {
+
+} else {
+
+}
+stampa("hai perso o hai indovidano tutti i numeri che non sono mine")
