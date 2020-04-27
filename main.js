@@ -18,7 +18,7 @@ function stampa(cosa_voglio_stampare) {
 var mine = numero_casuale(1,100);
 
 //  Stampo il valore delle mine usando la funzione stampa
-stampa(mine);
+// stampa(mine);
 
 // Genero tramine la funzione numero_casuale n(in questo caso 16) numeri casuali ,per il compuper, tra 1 e 100, che saranno le "mine".
 // Creo un contatore per accertare di creare n numeri casuali
@@ -48,13 +48,13 @@ stampa("tutti le mine da cui partire per il confronto " + memoria_mine);
 
 
 // Chiedo all'utente di inserire un numero alla volta, sempre compreso tra 1 e 100, che sarà la sua giocata.
-    var numero_utente = parseInt(prompt("Inserisci un numero: "));
-    // Verifico che il dato inserito sia idoneo
-    if (!isNaN(numero_utente) && numero_utente >= 1 && numero_utente <= 100) {
-        stampa(numero_utente);
-    } else {
-        stampa("il numero inserito non va bene");
-    }
+    // var numero_utente = parseInt(prompt("Inserisci un numero: "));
+    // // Verifico che il dato inserito sia idoneo
+    // if (!isNaN(numero_utente) && numero_utente >= 1 && numero_utente <= 100) {
+    //     stampa(numero_utente);
+    // } else {
+    //     stampa("il numero inserito non va bene");
+    // }
 // Ciclo do-while
 var i = 20;
 var x = -1;
@@ -71,9 +71,9 @@ do {
 // (Brainstorming:do-while dove nel while come condizione mettero diverso dalle mine perchè se numero è presente nella lista delle mine, la partita termina, altrimenti il gioco continua chiedendo all'utente un altro numero (continua a giocare )) e poi anche il numero è presente nella lista delle mine, la partita termina, altrimenti il gioco continua chiedendo all'utente un altro numero (continua a giocare
 
 // visualizzo l output finale ove comunico il punteggio, cioè il numero di volte che l'utente ha inserito un numero consentito;
-if (true) {
-
+if (memoria_numeri.length == 4 && !memoria_mine.includes(numero_utente)) {
+stampa("hai vinto");
 } else {
-
+stampa("hai perso")
 }
-stampa("hai perso o hai indovidano tutti i numeri che non sono mine")
+// stampa("hai perso o hai indovidano tutti i numeri che non sono mine")
