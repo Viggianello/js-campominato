@@ -27,8 +27,10 @@ var memoria_mine = [];//cosi posso salvare i dati per poi controntarli
 while (n <= 16) {
     var mine = numero_casuale(1,100);
     stampa(mine + " interazione numero n = " + n);// Visualizzo il numero_casuale.
-    memoria_mine.push(mine);
-    n++ // Condizione di incremento per uscire dal ciclo.
+    if (!memoria_mine.includes(mine)) {
+        memoria_mine.push(mine);
+        n++ // Condizione di incremento per uscire dal ciclo.
+    }
 }
 stampa("tutti le mine da cui partire per il confronto " + memoria_mine);
  // Genero una funzione che crea N numero casuale da un valore minimo(min) ad uno massimo(max).
