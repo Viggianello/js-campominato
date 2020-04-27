@@ -57,21 +57,24 @@ stampa("tutti le mine da cui partire per il confronto " + memoria_mine);
     // }
 // Ciclo do-while
 var i = 20;
-var x = -1;
+// var x = 0;
 var memoria_numeri =[]
+var perso = false;
 do {
     var numero_utente = parseInt(prompt("Inserisci un numero: " ,1));
     // Verifico che il dato inserito sia idoneo
     stampa(numero_utente);
     memoria_numeri.push(numero_utente);
     i--;
-    x++;
-} while (!isNaN(numero_utente) && numero_utente >= 1 && numero_utente <= 100 && i > 16 && numero_utente != parseInt(memoria_mine[x]) && x < 16)
+    if (memoria_mine.includes(numero_utente)) {
+        perso = true;
+    }
+} while (!isNaN(numero_utente) && numero_utente >= 1 && numero_utente <= 100 && i > 16 && !memoria_mine.includes(numero_utente))
 
 // (Brainstorming:do-while dove nel while come condizione mettero diverso dalle mine perchè se numero è presente nella lista delle mine, la partita termina, altrimenti il gioco continua chiedendo all'utente un altro numero (continua a giocare )) e poi anche il numero è presente nella lista delle mine, la partita termina, altrimenti il gioco continua chiedendo all'utente un altro numero (continua a giocare
 
 // visualizzo l output finale ove comunico il punteggio, cioè il numero di volte che l'utente ha inserito un numero consentito;
-if (memoria_numeri.length == 4 && !memoria_mine.includes(numero_utente)) {
+if (perso == false) {
 stampa("hai vinto");
 } else {
 stampa("hai perso")
