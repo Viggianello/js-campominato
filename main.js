@@ -56,7 +56,7 @@ stampa("tutti le mine da cui partire per il confronto " + memoria_mine);
     //     stampa("il numero inserito non va bene");
     // }
 // Ciclo do-while
-var i = 20;
+var i = 100;
 // var x = 0;
 var memoria_numeri =[]
 var perso = false;
