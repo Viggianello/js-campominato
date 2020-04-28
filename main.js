@@ -64,8 +64,10 @@ do {
     var numero_utente = parseInt(prompt("Inserisci un numero: " ,1));
     // Verifico che il dato inserito sia idoneo
     stampa(numero_utente);
-    memoria_numeri.push(numero_utente);
-    i--;
+    if (!memoria_numeri.includes(numero_utente)) {
+        memoria_numeri.push(numero_utente);
+        i--;
+    }
     if (memoria_mine.includes(numero_utente)) {
         perso = true;
     }
