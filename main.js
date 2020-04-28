@@ -6,7 +6,7 @@
 
 // Creo una funzione che crea un numero casuale da un valore minimo(min) ad uno massimo(max).
 function numero_casuale(min,max) {
-    return Math.floor(Math.random() * max) + min;
+    return Math.floor(Math.random() * (max - min +1)) + min;
 }
 
  // Creo una funzione per stampare in console.
